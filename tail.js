@@ -6,18 +6,19 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const tail = function(array) {let newArray = [];
+const tail = function(array) {
+  let newArray = [];
   for (let i = 1; i < array.length; i++) {
-    newArray.push(array[i])
+    newArray.push(array[i]);
   }
-  return newArray
-}
+  return newArray;
+};
 
-console.log(tail([1,2,3,4,5]))
-console.log(tail([]))
-console.log(tail(["only"]))
-console.log(tail(["dog","fish","cat","shark"]))
+console.log(tail([1,2,3,4,5]));
+console.log(tail([]));
+console.log(tail(["only"]));
+console.log(tail(["dog","fish","cat","shark"]));
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-assertEqual(words.length, 3); 
+assertEqual(words.length, 3);
 assertEqual(tail(words).length, 2);
