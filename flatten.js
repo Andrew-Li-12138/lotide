@@ -32,6 +32,6 @@ const flatten = function(arrays) {
 };
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
-assertArraysEqual(flatten([23, 44, [67, 89], 56, [88, 66], 7]), [23, 44, 67, 89, 56, 88, 66, 7])
+assertArraysEqual(flatten([23, 44, [67, 89], 56, [88, 66], 7]), [23, 44, 67, 89, 56, 88, 66, 7]);
 
  
