@@ -24,8 +24,11 @@ const assertEqual = function(actual, expected) {
 //test code
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
+  documentary: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
+  street: "Brooklyn Nine-Nine",
+  drama: "The Wire",
+  scary: "The Wire" 
 };
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
