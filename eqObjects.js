@@ -16,13 +16,35 @@ const eqObjects = function(object1, object2) {
   }
   //check if object 1 and 2 have same values for same keys
   for (let key of arrayKey1) {
-    if (object1[key] !== object2[key]) {
+    //check if both values are array
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      //if value is an array, compare value with same key between object 1 and 2 using eqArrays.
+      //if eqArrays returns false, eqObject returns false
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
+      // if eqArrays return true, excute else if, where we compare if the primitive values equal.
+      // if the values are not equal, return false
+    } else if (object1[key] !== object2[key]) {
+      return false;
+    }
+  }
+  //if all of the "return false" scenario did not happen, return true
+  return true;
+};
+
+//this function is  copied for supporting writting of eqObject
+const eqArrays = function(arrayX, arrayY) {
+  if (arrayX.length !== arrayY.length) {
+    return false;
+  }
+  for (let i = 0;  i < arrayX.length; i++) {
+    if (arrayX[i] !== arrayY[i]) {
       return false;
     }
   }
   return true;
 };
-
 
 //this code is copied here to help write test code
 const assertEqual = function(actual, expected) {
