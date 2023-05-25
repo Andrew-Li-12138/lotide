@@ -16,7 +16,7 @@ const eqObjects = function(object1, object2) {
   }
   //check if object 1 and 2 have same values for same keys
   for (let key of arrayKey1) {
-    if (arrayKey1[key] !== arrayKey2[key]) {
+    if (object1[key] !== object2[key]) {
       return false;
     }
   }
@@ -33,7 +33,7 @@ const assertEqual = function(actual, expected) {
   }
 
 };
-//test code
+//test code - primitives as values
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 eqObjects(shirtObject , anotherShirtObject); //true
@@ -44,3 +44,13 @@ eqObjects(shirtObject , longSleeveShirtObject); //false
 assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
 assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
 
+//test code - arrays as values
+const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
+eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject); // true
+
+const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
+eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // false
+
+assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true);
+assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
