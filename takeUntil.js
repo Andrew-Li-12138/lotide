@@ -1,18 +1,13 @@
 //parameter 'array' takes arrays, paramter 'callback' takes callback functions
 const takeUntil = function(array, callback) {
-  let arrayUntil = [];
-  //loop over array using index
-  for (let i = 0; i < array.length; i++) {
-    //represent elements in array by 'array[i]', pass them in callback function, and check if callback function returns truthy value
-    if (callback(array[i])) {
-    //when callback function returns truthy value, slice original array into a new array called 'arrayUntil'
-    //start from index 0, and end at the index of element which caused truthy value of callback funcion
-      arrayUntil = array.slice(0, i);
-      //function 'takeUntil' returns the new array and immidiately stop the loop and the function when a truthy value is returned from callback function
-      return arrayUntil;
-    }
-  }
+  //find out the index of the element passing to callback function and returns truthy value
+  let endIndex = array.findIndex(callback);
+  //slice the original array from beginning (index 0) to the element that made callback function return true
+  //immediately return new array and finish the function
+  return array.slice(0, endIndex);
 };
+
+//
 
 //these two fucntions are for writting test code
 const assertArraysEqual = function(actual, expected) {
