@@ -1,3 +1,5 @@
+console.log('****** test code for assertObjectsEqualTest.js ******');
+
 const assertObjectsEqual = require('../assertObjectsEqual');
 const eqObjects = require('../eqObjects');
 
@@ -20,3 +22,5 @@ assertObjectsEqual(multiColorShirtObject  , anotherMultiColorShirtObject);
 const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 console.log(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject)); // false
 assertObjectsEqual(multiColorShirtObject  , longSleeveMultiColorShirtObject);
+
+console.log('************');

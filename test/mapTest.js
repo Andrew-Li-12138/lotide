@@ -1,5 +1,5 @@
 
-console.log('*test code for map function*');
+console.log('****** test code for map function ******');
 
 const assertArraysEqual = require('../assertArraysEqual');
 const map = require('../map');
@@ -15,4 +15,4 @@ assertArraysEqual(results2,[2, 4, 6, 8]);
 const cuteAnimals = ["dogs", "cats", "dolpins", "pikachus", "Bulbasaurs"];
 const results3 = map(cuteAnimals, animal => animal + " are cute!");
 assertArraysEqual(results3, ['dogs are cute!', 'cats are cute!', 'dolpins are cute!', 'pikachus are cute!', 'Bulbasaurs are cute!']);
-console.log('----------------');
+console.log('************');
