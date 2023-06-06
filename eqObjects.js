@@ -33,6 +33,8 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+
 //this function is  copied for supporting writting of eqObject
 const eqArrays = function(arrayX, arrayY) {
   if (arrayX.length !== arrayY.length) {

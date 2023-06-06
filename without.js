@@ -16,6 +16,9 @@ const without = function(source, itemsToRemove) {
   return resultArray;
 };
 
+module.exports = without;
+
+//functions for test code
 const assertArraysEqual = function(arrayX, arrayY) {
   if (eqArrays(arrayX, arrayY) === true) {
     console.log("\u2705\u2705 Assertion Passed: arrays are equal");

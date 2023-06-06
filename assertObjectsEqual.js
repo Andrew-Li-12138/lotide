@@ -7,6 +7,8 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
+module.exports = assertObjectsEqual;
+
 //these two functions are copied to be used in function assertObjectsEqaul
 const eqObjects = function(object1, object2) {
   let arrayKey1 = []; let arrayKey2 = [];

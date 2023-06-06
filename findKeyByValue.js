@@ -11,6 +11,7 @@ const findKeyByValue = function(object, value) {
   return undefined;
 };
 
+module.exports = findKeyByValue;
 //this function is copied here for the purpose of writing test code
 const assertEqual = function(actual, expected) {
   if (actual === expected) {

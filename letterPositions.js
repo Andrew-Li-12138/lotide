@@ -16,6 +16,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 //these two functions are copied to help write test code
 const assertArraysEqual = function(arrayX, arrayY) {
   if (eqArrays(arrayX, arrayY)) {

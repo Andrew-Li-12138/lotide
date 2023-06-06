@@ -7,7 +7,7 @@ const takeUntil = function(array, callback) {
   return array.slice(0, endIndex);
 };
 
-//
+module.exports = takeUntil;
 
 //these two fucntions are for writting test code
 const assertArraysEqual = function(actual, expected) {
