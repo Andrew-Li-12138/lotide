@@ -67,11 +67,11 @@ console.log(middle(arr1)); // Output: [2]
 const arr2 = [1, 2, 3, 4];
 console.log(middle(arr2)); // Output: [2, 3]
 
-const arr2 = [1, 2];
-console.log(middle(arr2)); // Output: []
+const arr3 = [1, 2];
+console.log(middle(arr3)); // Output: []
 
-const arr2 = [1];
-console.log(middle(arr2)); // Output: []
+const arr4 = [1];
+console.log(middle(arr4)); // Output: []
 
 ### assertArraysEqual(...)
 
@@ -97,7 +97,7 @@ assertObjectsEqual(obj1, obj2); // Output:  ✅✅ Assertion Passed: { name: 'Jo
 
 const obj3 = { name: 'John', age: 30 };
 const obj4 = { name: 'John', age: 25 };
-assertObjectsEqual(obj3, obj4); // Output: ❌❌ Assertion Failed: { name: 'John', age: 30 } !== 1{ name: 'John', age: 25 }
+assertObjectsEqual(obj3, obj4); // Output: ❌❌ Assertion Failed: { name: 'John', age: 30 } !== { name: 'John', age: 25 }
 
 ### countLetters(...)
 
