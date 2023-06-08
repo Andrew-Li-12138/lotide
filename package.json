@@ -1,6 +1,6 @@
 {
   "name": "@andrewli12138/lotide",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "this is a student project for building a mini library to mimic Lodash",
   "main": "index.js",
   "directories": {
