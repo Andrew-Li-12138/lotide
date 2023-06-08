@@ -154,7 +154,7 @@ console.log(result); // Output: key3
 
 ### flatten(...)
 
-const nestedArray = [1, [2, [3, 4], 5], 6];
+const nestedArray = [1, [2, 3], [4, 5], 6];
 console.log(flatten(nestedArray)); // Output: [1, 2, 3, 4, 5, 6]
 
 ### letterPositions(...)
